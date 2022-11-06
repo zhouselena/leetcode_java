@@ -1,2 +1,2 @@
-# leetcode_java
+# Leetcode -> Java
 Leetcode code practice in Java.
