@@ -16,7 +16,7 @@ public class searchinsertposition_35 {
 			}
 			
 			else if (nums[midpoint] > target) {
-				if (nums[midpoint-1] < target) {
+				if ((midpoint <= 0) || (nums[midpoint-1] < target)) {
 					return midpoint;
 				}
 				
@@ -26,8 +26,11 @@ public class searchinsertposition_35 {
 			}
 			
 			else if (nums[midpoint] < target) {
-				if (nums[midpoint+1] > target) {
+				if ((midpoint >= nums.length-1) || (nums[midpoint+1] > target)) {
 					return (midpoint+1);
+				}
+				else {
+					left = midpoint + 1;
 				}
 			}
 			
@@ -41,9 +44,10 @@ public class searchinsertposition_35 {
 		
 		int[] nums = {1,3,5,6};
 		
-		searchInsert(nums, 5);
-		searchInsert(nums, 2);
-		searchInsert(nums, 7);
+		System.out.println(searchInsert(nums, 7));
+		System.out.println(searchInsert(nums, 0));
+		System.out.println(searchInsert(nums, 5));
+		System.out.println(searchInsert(nums, 2));
 
 	}
 
