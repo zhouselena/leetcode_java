@@ -1,6 +1,6 @@
 package learningplan_binarysearch1;
 
-public class searchinsertposition_35 {
+public class SearchInsertPosition_35 {
 	
 	public static int searchInsert(int[] nums, int target) {
 		

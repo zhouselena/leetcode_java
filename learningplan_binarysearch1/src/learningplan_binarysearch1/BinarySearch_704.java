@@ -1,6 +1,6 @@
 package learningplan_binarysearch1;
 
-public class binarysearch_704 {
+public class BinarySearch_704 {
 	
 	public static int search(int[] nums, int target) {
         

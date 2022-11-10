@@ -1,6 +1,6 @@
 package learningplan_binarysearch1;
 
-public class guessnumberhigherorlower_374 {
+public class GuessNumberHigherOrLower_374 {
 	
 	private static int N=6;
 	
