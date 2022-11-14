@@ -4,17 +4,25 @@ public class ValidPerfectSquare_367 {
 	
 	public static boolean isPerfectSquare(int num) {
 		
-		int left = 1;
-		int right = num;
+		if (num == 1)
+			return true;
+		
+		long left = 1;
+		long right = num/2;
 		
 		while (left <= right) {
 			
-			if ((num % left == 0) && (left == right)) {
+			long midpoint = left+(right-left)/2;
+			
+			if (midpoint*midpoint == num) {
 				return true;
 			}
-			
-			left += 1;
-			right = num/left;
+			if (midpoint*midpoint > num) {
+				right = midpoint - 1;
+			}
+			if (midpoint*midpoint < num) {
+				left = midpoint + 1;
+			}
 			
 		}
 		
@@ -24,7 +32,7 @@ public class ValidPerfectSquare_367 {
 
 	public static void main(String[] args) {
 		
-		System.out.println(isPerfectSquare(169));
+		System.out.println(isPerfectSquare(2000105819));
 
 	}
 
